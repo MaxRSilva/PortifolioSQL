@@ -1,0 +1,29 @@
+SELECT * FROM clientes WHERE Qtd_Filhos = 0 ORDER BY Nome ASC;
+SELECT * FROM Lojas WHERE ID_Loja <= 6  ORDER BY NUM_Funcionarios ASC;
+SELECT * FROM produtos WHERE Marca_Produto = "DELL" ORDER BY Preco_Unit ASC;
+SELECT * FROM locais WHERE Região = "Sudeste" and Estado = "RJ"  ORDER BY Cidade ASC;
+SELECT  
+	ID_Pedido, 	
+	Data_Venda,
+    Receita_Venda,
+    Custo_Venda
+FROM pedidos
+WHERE Custo_Venda > '90'
+ORDER BY Data_Venda ASC;
+
+SELECT 
+	Nome,
+    Sobrenome,
+    Email,
+    Renda_Anual,
+    Escolaridade
+FROM clientes
+WHERE Renda_Anual >= "50000"
+ORDER BY Renda_Anual DESC;
+
+SELECT 
+
+
+
+
+
