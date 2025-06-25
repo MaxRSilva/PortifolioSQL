@@ -22,6 +22,35 @@ WHERE Renda_Anual >= "50000"
 ORDER BY Renda_Anual DESC;
 
 SELECT 
+	COUNT(Nome)
+FROM clientes;
+
+
+
+SELECT 
+	ID_Cliente,
+	SUM(Receita_Venda) as  Total_Receita
+FROM pedidos
+GROUP BY ID_Cliente
+HAVING SUM(Receita_Venda) > 300;
+
+
+
+SELECT 
+	Marca_Produto,
+    SUM(Preco_Unit) as Soma_Valor
+FROM produtos 
+GROUP BY Marca_Produto
+HAVING SUM(Preco_Unit) > 2000;
+
+SELECT 
+	ID_Loja,
+	SUM(Receita_Venda) as  Soma_Receita
+FROM pedidos
+GROUP BY ID_Loja
+HAVING SUM(Receita_Venda) > 900
+ORDER BY ID_Loja ASC; 
+
 
 
 
