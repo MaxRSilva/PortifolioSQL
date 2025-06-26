@@ -54,5 +54,42 @@ ORDER BY ID_Loja ASC;
 
 
 
+SELECT DISTINCT Nome, Qtd_Filhos, Escolaridade  
+FROM clientes
+WHERE Escolaridade = "Parcial";
+
+
+
+SELECT DISTINCT Cidade, Estado, Região
+FROM locais
+WHERE Região = "Sudeste" AND Estado = "RJ";
+
+
+SELECT 
+	Marca_produto,
+	SUM(Preco_Unit) AS "Total" 
+FROM produtos
+GROUP BY Marca_Produto
+HAVING SUM(Preco_Unit) > 100;
+
+
+
+SELECT DISTINCT ID_Loja, ID_Cliente, Custo_Venda
+FROM pedidos
+WHERE Custo_Venda = 129.5;
+
+
+SELECT
+	Nome_Produto,
+	SUM(Custo_Unit) as "Soma_Custo_Unit"
+FROM produtos
+GROUP BY Nome_Produto
+HAVING SUM(Custo_Unit) > 0
+ORDER BY SUM(Custo_Unit) ASC;
+
+
+
+
+
 
 
