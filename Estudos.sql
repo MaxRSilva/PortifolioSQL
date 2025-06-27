@@ -110,7 +110,40 @@ JOIN produtos
 	ON pedidos.ID_Produto =  produtos.ID_Produto;
     
     
+SELECT*
+FROM pedidos
+JOIN (SELECT* FROM produtos WHERE Nome_Produto LIKE "%Kit%") as Vendas_De_Kit
+	ON pedidos.ID_Produto = Vendas_De_Kit.ID_Produto;
+    
+    
+CREATE TABLE Vendas_Analise AS
 
+WITH
+produtos_Com_M AS (Select* FROM produtos WHERE Nome_Produto LIKE "M%"),
+produtos_Webcam AS (Select* FROM produtos WHERE Nome_Produto LIKE "Webcam%")
+
+SELECT*
+FROM produtos_Com_M
+
+UNION ALL 
+
+SELECT*
+FROM produtos_Webcam;
+
+
+SELECT*
+FROM Vendas_Analise;
+
+
+SELECT*
+FROM pedidos	
+ JOIN Vendas_Analise 
+	ON Pedidos.ID_Produto = Vendas_Analise.ID_Produto;
+    
+SELECT*
+FROM pedidos 
+JOIN produtos
+	ON pedidos.ID_Produto =  produtos.ID_Produto
 
 
 
