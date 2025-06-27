@@ -96,6 +96,23 @@ LEFT JOIN pedidos
 GROUP BY Marca_Produto;
 
 
+#SUBCONSULTA 
+
+SELECT
+	Empregados_Letra_A.Nome,
+    Empregados_Letra_A.Escolaridade,
+    Pedidos.ID_Produto,
+    Nome_Produto
+FROM pedidos 
+JOIN(SELECT * FROM clientes WHERE Nome LIKE "A%") as Empregados_Letra_A
+	ON pedidos.ID_Cliente = Empregados_Letra_A.ID_Cliente
+JOIN produtos
+	ON pedidos.ID_Produto =  produtos.ID_Produto;
+    
+    
+
+
+
 
 
 
