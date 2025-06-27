@@ -87,6 +87,14 @@ GROUP BY Nome_Produto
 HAVING SUM(Custo_Unit) > 0
 ORDER BY SUM(Custo_Unit) ASC;
 
+SELECT
+	Marca_Produto,
+    SUM(pedidos.Receita_Venda) as "Soma Receita Venda"
+FROM produtos	
+LEFT JOIN pedidos
+	ON produtos.ID_Produto = pedidos.ID_Produto
+GROUP BY Marca_Produto;
+
 
 
 
