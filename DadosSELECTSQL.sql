@@ -95,6 +95,15 @@ GROUP BY ID_Loja;
 
 
 
+
+
+
+
+
+
+
+
+
 	
 
 
