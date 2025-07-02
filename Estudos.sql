@@ -143,7 +143,20 @@ FROM pedidos
 SELECT*
 FROM pedidos 
 JOIN produtos
-	ON pedidos.ID_Produto =  produtos.ID_Produto
+	ON pedidos.ID_Produto =  produtos.ID_Produto;
+    
+    
+SELECT
+	Marca_Produto,
+	COUNT(pedidos.Qtd_Vendida) as "Quantidade_Por_Marca"
+FROM pedidos
+JOIN produtos
+	ON pedidos.ID_Produto = produtos.ID_Produto
+GROUP BY Marca_Produto;
+
+
+
+
 
 
 
