@@ -43,5 +43,4 @@ Este projeto foi criado para fixação de conceitos em SQL, com foco em análise
 
 👨‍💻 Autor
 Max Ramon da Silva
-[🔗 LinkedIn](https://www.linkedin.com/in/max-ramon-a253141a4)  
-[🔗 GitHub](https://github.com/MaxRSilva)
+
